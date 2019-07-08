@@ -10,7 +10,8 @@ class DataService
   private
 
   def get_json(url, params = {})
-    response = conn.get(params)
+    response = conn.get(url, params)
+    require "pry"; binding.pry
     JSON.parse(response.body, symbolize_names: true)
   end
 
