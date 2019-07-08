@@ -6,7 +6,6 @@ class FoodFacade
   end
 
   def results
-    require "pry"; binding.pry
     results = data_service.food_search_results
   end
 
