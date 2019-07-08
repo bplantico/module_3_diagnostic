@@ -5,7 +5,7 @@ RSpec.describe 'As a user' do
     it 'I see a search form where I can enter a search term' do
       visit '/'
 
-      fill_in 'Search', with: 'sweet potatoes'
+      fill_in 'q', with: 'sweet potatoes'
 
       click_on 'Search'
 
