@@ -6,7 +6,12 @@ class FoodFacade
   end
 
   def results
+    require "pry"; binding.pry
     results = data_service.food_search_results
+
+    results.each do |result|
+      Food.new(result)
+    end
   end
 
   private
